@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { ArrowRight, WhatsApp } from "./Icons";
+import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
-      {/* Background */}
+      {/* Background — cinematic video with image poster fallback */}
       <div className="absolute inset-0">
         <Image
           src="/gallery/living-room-01.jpeg"
@@ -13,10 +14,21 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="animate-kenburns object-cover"
+          className="object-cover"
         />
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/gallery/living-room-01.jpeg"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/65 to-ink/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-ink/40" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1600px] px-6 pt-28 md:px-10 lg:px-16">
@@ -61,13 +73,13 @@ export default function Hero() {
 
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-3 border-t border-white/15 pt-6 sm:gap-6 sm:pt-7">
             {[
-              { n: "10+", l: "Years Experience" },
-              { n: "250+", l: "Projects Delivered" },
-              { n: "100%", l: "Turnkey Handover" },
+              { end: 10, suffix: "+", l: "Years Experience" },
+              { end: 250, suffix: "+", l: "Projects Delivered" },
+              { end: 100, suffix: "%", l: "Turnkey Handover" },
             ].map((s) => (
               <div key={s.l}>
                 <dt className="font-display text-2xl font-semibold text-gold-soft sm:text-3xl">
-                  {s.n}
+                  <CountUp end={s.end} suffix={s.suffix} />
                 </dt>
                 <dd className="mt-1 text-[10px] uppercase tracking-wider text-white/65 sm:text-xs">
                   {s.l}

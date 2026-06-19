@@ -4,6 +4,8 @@ import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
+import Showreel from "@/components/Showreel";
+import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -46,7 +48,9 @@ export default function Home() {
         <Marquee />
         <About />
         <Services />
+        <Showreel />
         <Portfolio />
+        <Testimonials />
         <Process />
         <Contact />
       </main>
