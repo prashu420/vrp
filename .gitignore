@@ -8,3 +8,7 @@ next-env.d.ts
 .DS_Store
 npm-debug.log*
 gemini_generated_video_*.mp4
+
+# Raw client source assets at the root
+/*.pdf
+/WhatsApp Image*.jpeg

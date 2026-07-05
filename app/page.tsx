@@ -3,7 +3,10 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import MaterialBoard from "@/components/MaterialBoard";
 import Portfolio from "@/components/Portfolio";
+import CadBlueprints from "@/components/CadBlueprints";
+import CostEstimator from "@/components/CostEstimator";
 import Showreel from "@/components/Showreel";
 import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
@@ -48,8 +51,11 @@ export default function Home() {
         <Marquee />
         <About />
         <Services />
+        <MaterialBoard />
         <Showreel />
         <Portfolio />
+        <CadBlueprints />
+        <CostEstimator />
         <Testimonials />
         <Process />
         <Contact />
