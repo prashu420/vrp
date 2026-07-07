@@ -18,6 +18,12 @@ export const site = {
     "Asian Paints Royale",
     "Blum Motion",
     "Somany Tiles",
+    "TATA Steel",
+    "Jindal Panther",
+    "Rathi Steel",
+    "UltraTech Cement",
+    "Wonder Cement",
+    "JK Cement",
   ],
   localities: [
     "Jhotwara",
@@ -58,7 +64,7 @@ export const services: Service[] = [
   {
     title: "Turnkey Construction",
     description:
-      "Full civil construction using premium materials (TATA steel, JK cement), managed by certified engineers with clear timeline tracking and zero contractor coordination.",
+      "Full civil construction using premium materials (TATA Steel, Jindal Panther, Rathi, UltraTech, Wonder, JK Cement), managed by certified engineers with clear timeline tracking and zero contractor coordination.",
     icon: "crane",
   },
   {

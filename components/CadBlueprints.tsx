@@ -13,7 +13,7 @@ type BlueprintItem = {
 const bedroomBlueprints: BlueprintItem[] = [
   {
     title: "Floor Layout & Furniture Plan",
-    src: "/gallery/guest-master-bedroom/blueprints/blueprint-01.pdf",
+    src: "/gallery/guest-master-bedroom/blueprints/blueprint-01.png",
     description: "Detailed bedroom zoning, entrance axes, and furniture spatial coordinates aligned to Vastu standards.",
   },
   {
@@ -23,7 +23,7 @@ const bedroomBlueprints: BlueprintItem[] = [
   },
   {
     title: "Master Bed Wardrobe Section & Elev.",
-    src: "/gallery/guest-master-bedroom/blueprints/blueprint-03.pdf",
+    src: "/gallery/guest-master-bedroom/blueprints/blueprint-03.png",
     description: "Internal shelving heights, drawer spacing, hanger rail levels, and exterior wood laminate elevations.",
   },
   {
@@ -113,7 +113,7 @@ export default function CadBlueprints() {
                   </svg>
                 </button>
                 <a
-                  href={active.src}
+                  href={active.src.replace(".png", ".pdf")}
                   download
                   className="rounded-lg bg-gold/90 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-gold transition-colors flex items-center gap-1.5 shadow-md"
                 >
@@ -197,7 +197,7 @@ export default function CadBlueprints() {
 
                   {/* External download icon */}
                   <a
-                    href={bp.src}
+                    href={bp.src.replace(".png", ".pdf")}
                     download
                     onClick={(e) => handleDownload(e, bp.src)}
                     className="p-1 rounded-lg text-white/40 hover:text-gold hover:bg-white/15 transition-all self-center ml-1"
@@ -227,7 +227,7 @@ export default function CadBlueprints() {
             </h4>
             <div className="flex items-center gap-3">
               <a
-                href={active.src}
+                href={active.src.replace(".png", ".pdf")}
                 download
                 className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white hover:bg-gold hover:text-white transition-colors"
                 onClick={(e) => e.stopPropagation()}
